@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Resume</h1>
+        <form id="resume-form" class="form">
+            <!-- Personal Details -->
+            <div class="input-container">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="input-container">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="input-container">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="input-container">
+                <label for="profile-picture">Profile Picture:</label>
+                <input type="file" id="profile-picture">
+            </div>
+
+            <!-- About Section -->
+            <div class="input-container">
+                <label for="about">About:</label>
+                <textarea id="about" rows="4" required></textarea>
+            </div>
+
+            <!-- Education Section -->
+            <div class="input-container">
+                <label for="education">Education:</label>
+                <textarea id="education" rows="3" required></textarea>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="input-container">
+                <label for="experience">Experience:</label>
+                <textarea id="experience" rows="3" required></textarea>
+            </div>
+
+            <!-- LinkedIn Section -->
+            <div class="input-container">
+                <label for="linkedin">LinkedIn Profile:</label>
+                <input type="url" id="linkedin">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Output Section -->
+        <div id="output-container" class="output-container" style="display:none;">
+            <h2>Resume Preview</h2>
+            <div id="resume-content" class="resume-content">
+                <img id="profile-img" class="profile-picture" src="" alt="Profile Picture" style="display:none;">
+                <p><strong>Name:</strong> <span id="output-name"></span></p>
+                <p><strong>Email:</strong> <span id="output-email"></span></p>
+                <p><strong>Phone:</strong> <span id="output-phone"></span></p>
+                <p><strong>About:</strong> <span id="output-about"></span></p>
+                <p><strong>Education:</strong> <span id="output-education"></span></p>
+                <p><strong>Experience:</strong> <span id="output-experience"></span></p>
+                <p><strong>LinkedIn:</strong> <a id="output-linkedin" href="#" target="_blank"></a></p>
+            </div>
+            <button id="download-pdf">Download PDF</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

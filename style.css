@@ -1,0 +1,155 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    height: 200vh; /* Full height */
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    background-color: #090909;
+    font-family: Arial, sans-serif;
+
+}
+
+/* General Container Styles */
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #85dfdb;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgb(44, 193, 204);
+    
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #050505;
+    text-align: center;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-container input,
+.input-container textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border 0.3s;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+    border: 1px solid #429294;
+    outline: none;
+}
+
+textarea {
+    resize: none; /* Prevent resizing */
+}
+
+/* Button Styles */
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #4ca7a1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #20434a;
+    color:white;
+}
+
+/* Output Section Styles */
+.output-container {
+    margin-top: 30px;
+    display: none;
+}
+
+.resume-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.output-container h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.output-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.output-container a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.output-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .form {
+        max-width: 100%;
+    }
+
+    .resume-content {
+        align-items: flex-start;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+}
